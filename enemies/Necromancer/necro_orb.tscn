@@ -1,0 +1,141 @@
+[gd_scene load_steps=21 format=3 uid="uid://bxdxdfdqwgdvg"]
+
+[ext_resource type="Script" path="res://enemies/Necromancer/necro_orb.gd" id="1_rc4tx"]
+[ext_resource type="Texture2D" uid="uid://bbihtdj5yxymj" path="res://enemies/Necromancer/Sprites/Fire Ball/Explosion.png" id="2_pdxc3"]
+[ext_resource type="Texture2D" uid="uid://d275q7k16bu50" path="res://enemies/Necromancer/Sprites/Fire Ball/Move.png" id="3_1bcth"]
+[ext_resource type="AudioStream" uid="uid://blqc2dx0g8fpw" path="res://enemies/Necromancer/Sounds/orb_explosion.mp3" id="4_y7dc7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0p3uk"]
+radius = 26.0768
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74vtb"]
+atlas = ExtResource("2_pdxc3")
+region = Rect2(0, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnb5k"]
+atlas = ExtResource("2_pdxc3")
+region = Rect2(46, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hlp3w"]
+atlas = ExtResource("2_pdxc3")
+region = Rect2(92, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fukg7"]
+atlas = ExtResource("2_pdxc3")
+region = Rect2(138, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4gca"]
+atlas = ExtResource("2_pdxc3")
+region = Rect2(184, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0ued"]
+atlas = ExtResource("2_pdxc3")
+region = Rect2(230, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_042b4"]
+atlas = ExtResource("2_pdxc3")
+region = Rect2(276, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyukh"]
+atlas = ExtResource("3_1bcth")
+region = Rect2(0, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rqk2"]
+atlas = ExtResource("3_1bcth")
+region = Rect2(46, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3hti"]
+atlas = ExtResource("3_1bcth")
+region = Rect2(92, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt47c"]
+atlas = ExtResource("3_1bcth")
+region = Rect2(138, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juljj"]
+atlas = ExtResource("3_1bcth")
+region = Rect2(184, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntelq"]
+atlas = ExtResource("3_1bcth")
+region = Rect2(230, 0, 46, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_limn1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74vtb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnb5k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hlp3w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fukg7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4gca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0ued")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_042b4")
+}],
+"loop": false,
+"name": &"exploding",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyukh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rqk2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u3hti")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mt47c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juljj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntelq")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7y017"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_rc4tx")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["Enemy"]]
+position = Vector2(0, 1)
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_0p3uk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+sprite_frames = SubResource("SpriteFrames_limn1")
+animation = &"exploding"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7y017")
+disabled = true
+
+[node name="fire_explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_y7dc7")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="animation_finished" from="Area2D/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

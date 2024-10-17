@@ -1,0 +1,314 @@
+[gd_scene load_steps=31 format=3 uid="uid://regf1gestlkg"]
+
+[ext_resource type="Script" path="res://menus/character_select.gd" id="1_l4ry1"]
+[ext_resource type="Texture2D" uid="uid://cr2vp661dfi0j" path="res://dark-pixel-d86vpb924ivkc68j.png" id="2_0pp6e"]
+[ext_resource type="Texture2D" uid="uid://deg3ar4m6xmlx" path="res://player_characters/Samurai/Sprites/spritesheet.png" id="2_fmxli"]
+[ext_resource type="Texture2D" uid="uid://dn5r0yt7xgpcg" path="res://player_characters/Samurai/Sprites/Idle/tile000.png" id="2_lgoar"]
+[ext_resource type="Texture2D" uid="uid://dcrxx64pdxxr8" path="res://player_characters/Samurai/Sprites/Idle/tile001.png" id="3_2w6a4"]
+[ext_resource type="Texture2D" uid="uid://byh3mus65woei" path="res://player_characters/Samurai/Sprites/Idle/tile002.png" id="4_hkdxg"]
+[ext_resource type="Texture2D" uid="uid://co3iluu5ffcoe" path="res://player_characters/Samurai/Sprites/Idle/tile003.png" id="5_2ghyq"]
+[ext_resource type="Texture2D" uid="uid://ygokrem5ki35" path="res://player_characters/Samurai/Sprites/Idle/tile004.png" id="6_rnh81"]
+[ext_resource type="Texture2D" uid="uid://7ctqegb6wocv" path="res://player_characters/Samurai/Sprites/Idle/tile005.png" id="7_4w0dy"]
+[ext_resource type="Texture2D" uid="uid://dvtx1xydgpjp" path="res://player_characters/Samurai/Sprites/Idle/tile006.png" id="8_6omce"]
+[ext_resource type="Texture2D" uid="uid://drcdb0thy62wy" path="res://player_characters/Samurai/Sprites/Idle/tile007.png" id="9_hxfv2"]
+[ext_resource type="AudioStream" uid="uid://hrwjjx8c5a0i" path="res://audio/click.mp3" id="11_fb67r"]
+[ext_resource type="Texture2D" uid="uid://cyn47u4n4mac" path="res://Medieval Warrior Pack 3/Sprites/Idle.png" id="12_g7ha6"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gk1n7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_lgoar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2w6a4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_hkdxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2ghyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rnh81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4w0dy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_6omce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hxfv2")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avovu"]
+atlas = ExtResource("2_fmxli")
+region = Rect2(0, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xl2a"]
+atlas = ExtResource("2_fmxli")
+region = Rect2(64, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bywym"]
+atlas = ExtResource("2_fmxli")
+region = Rect2(128, 320, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rn8aw"]
+atlas = ExtResource("2_fmxli")
+region = Rect2(192, 320, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vj1t1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avovu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xl2a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bywym")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rn8aw")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_36vo4"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(0, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0f4r4"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(135, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wys66"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(270, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16tqx"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(405, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ywbb"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(540, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_61g3o"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(675, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3dd0"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(810, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13gop"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(945, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajeb1"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(1080, 0, 135, 135)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3qhf"]
+atlas = ExtResource("12_g7ha6")
+region = Rect2(1215, 0, 135, 135)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_txwus"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_36vo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0f4r4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wys66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16tqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ywbb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_61g3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3dd0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13gop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ajeb1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3qhf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="CharacterSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_l4ry1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.745098, 0.462745, 0.67451, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0pp6e")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 99.0
+offset_top = 94.0
+offset_right = -93.0
+offset_bottom = -333.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Samurai" type="Button" parent="HBoxContainer"]
+self_modulate = Color(6.509, 0, 2.367, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Samurai"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/Samurai/MarginContainer"]
+position = Vector2(20, 13.5)
+scale = Vector2(3.77, 3.77)
+sprite_frames = SubResource("SpriteFrames_gk1n7")
+animation = &"idle"
+
+[node name="Panel" type="Panel" parent="HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="Archer" type="Button" parent="HBoxContainer"]
+self_modulate = Color(4.142, 1, 5.917, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/Archer"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/Archer/MarginContainer"]
+scale = Vector2(5, 5.43)
+sprite_frames = SubResource("SpriteFrames_vj1t1")
+animation = &"idle"
+frame_progress = 0.759912
+
+[node name="Panel2" type="Panel" parent="HBoxContainer"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.2
+
+[node name="UnknownChar" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="MarginContainer" type="MarginContainer" parent="HBoxContainer/UnknownChar"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -146.5
+offset_bottom = 146.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HBoxContainer/UnknownChar/MarginContainer"]
+position = Vector2(-5.5, 140)
+scale = Vector2(5.15, 5.15)
+sprite_frames = SubResource("SpriteFrames_txwus")
+animation = &"idle"
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_fb67r")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 103.0
+offset_top = -187.0
+offset_right = 318.0
+offset_bottom = -81.0
+grow_vertical = 0
+alignment = 2
+
+[node name="Back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Back
+"
+
+[connection signal="mouse_entered" from="HBoxContainer/Samurai" to="." method="_on_samurai_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Samurai" to="." method="_on_samurai_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/Samurai" to="." method="_on_samurai_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/Archer" to="." method="_on_archer_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/Archer" to="." method="_on_archer_mouse_exited"]
+[connection signal="pressed" from="HBoxContainer/Archer" to="." method="_on_archer_pressed"]
+[connection signal="mouse_entered" from="HBoxContainer/UnknownChar" to="." method="_on_unknown_char_mouse_entered"]
+[connection signal="mouse_exited" from="HBoxContainer/UnknownChar" to="." method="_on_unknown_char_mouse_exited"]
+[connection signal="finished" from="click" to="." method="_on_click_finished"]
+[connection signal="pressed" from="VBoxContainer/Back" to="." method="_on_back_pressed"]

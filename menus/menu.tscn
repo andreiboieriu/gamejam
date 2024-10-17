@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=3 uid="uid://byk2wfoayfim2"]
+
+[ext_resource type="Script" path="res://menus/menu.gd" id="1_a0j21"]
+[ext_resource type="Texture2D" uid="uid://cpfr8yor2kg4x" path="res://menus/background-frames/background.tres" id="2_gdwit"]
+[ext_resource type="AudioStream" uid="uid://hrwjjx8c5a0i" path="res://audio/click.mp3" id="3_5q3kt"]
+[ext_resource type="Texture2D" uid="uid://sul8d8wprd62" path="res://player_characters/Samurai/Sprites/Death/tile005.png" id="4_y1ksi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_78a50"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fisdc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_y1ksi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ao6hs"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a0j21")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_gdwit")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 103.0
+offset_top = -187.0
+offset_right = 318.0
+offset_bottom = -81.0
+grow_vertical = 0
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Play
+"
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Options
+"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit
+"
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -225.0
+offset_top = -219.0
+offset_right = -71.0
+offset_bottom = -69.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MarginContainer"]
+position = Vector2(-1543.9, -196.126)
+sprite_frames = SubResource("SpriteFrames_78a50")
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_5q3kt")
+
+[node name="samurai_dead" type="AnimatedSprite2D" parent="."]
+position = Vector2(1157, 634)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_fisdc")
+autoplay = "default"
+frame_progress = 0.00700863
+flip_h = true
+
+[node name="archer" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ao6hs")
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="finished" from="click" to="." method="_on_click_finished"]

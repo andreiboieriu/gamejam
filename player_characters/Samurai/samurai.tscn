@@ -1,0 +1,282 @@
+[gd_scene load_steps=52 format=3 uid="uid://hji317inir0a"]
+
+[ext_resource type="Script" path="res://player_characters/Samurai/samurai.gd" id="1_8elah"]
+[ext_resource type="Texture2D" uid="uid://d23yr4sv8sv0y" path="res://player_characters/Samurai/Sprites/Attack1/tile000.png" id="2_6d5o7"]
+[ext_resource type="Texture2D" uid="uid://c77jht3dwp7jp" path="res://player_characters/Samurai/Sprites/Attack1/tile001.png" id="3_tcenj"]
+[ext_resource type="Texture2D" uid="uid://cxof0bu32dsud" path="res://player_characters/Samurai/Sprites/Attack1/tile002.png" id="4_bs86t"]
+[ext_resource type="Texture2D" uid="uid://dmtkr48ybxk5y" path="res://player_characters/Samurai/Sprites/Attack1/tile003.png" id="5_y1lbi"]
+[ext_resource type="Texture2D" uid="uid://c8d5sysdh3yyo" path="res://player_characters/Samurai/Sprites/Attack1/tile004.png" id="6_p2da4"]
+[ext_resource type="Texture2D" uid="uid://baegf3ldxvt5q" path="res://player_characters/Samurai/Sprites/Attack1/tile005.png" id="7_vutwj"]
+[ext_resource type="Texture2D" uid="uid://c34muuc1kfusc" path="res://player_characters/Samurai/Sprites/Attack2/tile000.png" id="8_thogp"]
+[ext_resource type="Texture2D" uid="uid://lbpck4mi3f7l" path="res://player_characters/Samurai/Sprites/Attack2/tile001.png" id="9_ipwjg"]
+[ext_resource type="Texture2D" uid="uid://cq5lwbm415lf4" path="res://player_characters/Samurai/Sprites/Attack2/tile002.png" id="10_0d6xy"]
+[ext_resource type="Texture2D" uid="uid://c706kscgnk0tc" path="res://player_characters/Samurai/Sprites/Attack2/tile003.png" id="11_3ssh2"]
+[ext_resource type="Texture2D" uid="uid://gwhn588iyktf" path="res://player_characters/Samurai/Sprites/Attack2/tile004.png" id="12_vjbl0"]
+[ext_resource type="Texture2D" uid="uid://cp2f0xepyw45m" path="res://player_characters/Samurai/Sprites/Attack2/tile005.png" id="13_rf2sy"]
+[ext_resource type="Texture2D" uid="uid://qlavknpdhxil" path="res://player_characters/Samurai/Sprites/Death/tile000.png" id="14_pwg7q"]
+[ext_resource type="Texture2D" uid="uid://bqlycd7o3bj67" path="res://player_characters/Samurai/Sprites/Death/tile001.png" id="15_mtn01"]
+[ext_resource type="Texture2D" uid="uid://csw8jdcyvj44j" path="res://player_characters/Samurai/Sprites/Death/tile002.png" id="16_d8sny"]
+[ext_resource type="Texture2D" uid="uid://bky0hlnbao5f3" path="res://player_characters/Samurai/Sprites/Death/tile003.png" id="17_06wr0"]
+[ext_resource type="Texture2D" uid="uid://bfww3jchyh7cf" path="res://player_characters/Samurai/Sprites/Death/tile004.png" id="18_nq55h"]
+[ext_resource type="Texture2D" uid="uid://sul8d8wprd62" path="res://player_characters/Samurai/Sprites/Death/tile005.png" id="19_4ekhp"]
+[ext_resource type="Texture2D" uid="uid://bwg724o0fder2" path="res://player_characters/Samurai/Sprites/Take_hit/tile000.png" id="20_o141a"]
+[ext_resource type="Texture2D" uid="uid://b4xcvu6i6p3qe" path="res://player_characters/Samurai/Sprites/Take_hit/tile001.png" id="21_6ll2h"]
+[ext_resource type="Texture2D" uid="uid://cxluhivtwgvn2" path="res://player_characters/Samurai/Sprites/Take_hit/tile002.png" id="22_oscu7"]
+[ext_resource type="Texture2D" uid="uid://bev75kr7jilcr" path="res://player_characters/Samurai/Sprites/Take_hit/tile003.png" id="23_if0li"]
+[ext_resource type="Texture2D" uid="uid://dn5r0yt7xgpcg" path="res://player_characters/Samurai/Sprites/Idle/tile000.png" id="24_eee5i"]
+[ext_resource type="Texture2D" uid="uid://dcrxx64pdxxr8" path="res://player_characters/Samurai/Sprites/Idle/tile001.png" id="25_fh3g8"]
+[ext_resource type="Texture2D" uid="uid://byh3mus65woei" path="res://player_characters/Samurai/Sprites/Idle/tile002.png" id="26_5omq4"]
+[ext_resource type="Texture2D" uid="uid://co3iluu5ffcoe" path="res://player_characters/Samurai/Sprites/Idle/tile003.png" id="27_1ribj"]
+[ext_resource type="Texture2D" uid="uid://ygokrem5ki35" path="res://player_characters/Samurai/Sprites/Idle/tile004.png" id="28_5lw1b"]
+[ext_resource type="Texture2D" uid="uid://7ctqegb6wocv" path="res://player_characters/Samurai/Sprites/Idle/tile005.png" id="29_7wydj"]
+[ext_resource type="Texture2D" uid="uid://dvtx1xydgpjp" path="res://player_characters/Samurai/Sprites/Idle/tile006.png" id="30_dojh3"]
+[ext_resource type="Texture2D" uid="uid://drcdb0thy62wy" path="res://player_characters/Samurai/Sprites/Idle/tile007.png" id="31_87g4y"]
+[ext_resource type="Texture2D" uid="uid://bbyoxysseug4k" path="res://player_characters/Samurai/Sprites/Jump/tile000.png" id="32_ej44j"]
+[ext_resource type="Texture2D" uid="uid://jkn53vfklh4u" path="res://player_characters/Samurai/Sprites/Run/tile000.png" id="32_iv8k2"]
+[ext_resource type="Texture2D" uid="uid://gqb2rpdwiedv" path="res://player_characters/Samurai/Sprites/Run/tile001.png" id="33_c2kpq"]
+[ext_resource type="Texture2D" uid="uid://bs47cpgt8hepj" path="res://player_characters/Samurai/Sprites/Jump/tile001.png" id="33_d2qgp"]
+[ext_resource type="Texture2D" uid="uid://dv6lbimvqjhss" path="res://player_characters/Samurai/Sprites/Run/tile002.png" id="34_77kej"]
+[ext_resource type="Texture2D" uid="uid://cwonxes1qyn0d" path="res://player_characters/Samurai/Sprites/Run/tile003.png" id="35_sttxw"]
+[ext_resource type="Texture2D" uid="uid://d2davl0snrene" path="res://player_characters/Samurai/Sprites/Run/tile004.png" id="36_80sb3"]
+[ext_resource type="Texture2D" uid="uid://dlxd6voky0fx1" path="res://player_characters/Samurai/Sprites/Run/tile005.png" id="37_3owe3"]
+[ext_resource type="Texture2D" uid="uid://c0xnsb8w2ob27" path="res://player_characters/Samurai/Sprites/Run/tile006.png" id="38_dkm5b"]
+[ext_resource type="Texture2D" uid="uid://ba7l3qea58boe" path="res://player_characters/Samurai/Sprites/Run/tile007.png" id="39_1c6j6"]
+[ext_resource type="AudioStream" uid="uid://ik2yqvn70lnq" path="res://audio/samurai_sword.mp3" id="42_lbphu"]
+[ext_resource type="AudioStream" uid="uid://dhi7edb43ee12" path="res://audio/samurai_sword_miss.mp3" id="43_t1678"]
+[ext_resource type="AudioStream" uid="uid://bfnk5xnwxytpw" path="res://audio/samurai_run.mp3" id="44_8xp4r"]
+[ext_resource type="AudioStream" uid="uid://kcmg7ss151kg" path="res://audio/samurai_jump.mp3" id="44_u0ule"]
+[ext_resource type="AudioStream" uid="uid://bw8pkftep0ek0" path="res://audio/samurai_hit.mp3" id="45_jc87d"]
+[ext_resource type="AudioStream" uid="uid://br4x7p18w3ci" path="res://audio/samurai_death.mp3" id="46_npq8f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i88ln"]
+atlas = ExtResource("32_ej44j")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_obmil"]
+atlas = ExtResource("33_d2qgp")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ucanh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_thogp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ipwjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0d6xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_3ssh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_vjbl0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_rf2sy")
+}],
+"loop": false,
+"name": &"attack2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.7,
+"texture": ExtResource("2_6d5o7")
+}, {
+"duration": 0.7,
+"texture": ExtResource("3_tcenj")
+}, {
+"duration": 0.8,
+"texture": ExtResource("4_bs86t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y1lbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p2da4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_vutwj")
+}],
+"loop": false,
+"name": &"attacking",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_pwg7q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mtn01")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_d8sny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_06wr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_nq55h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4ekhp")
+}],
+"loop": false,
+"name": &"death",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_o141a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6ll2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oscu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_if0li")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_eee5i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_fh3g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_5omq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_1ribj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_5lw1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_7wydj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_dojh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_87g4y")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i88ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_obmil")
+}],
+"loop": true,
+"name": &"jumping",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_iv8k2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_c2kpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_77kej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_sttxw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_80sb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_3owe3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_dkm5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_1c6j6")
+}],
+"loop": true,
+"name": &"running",
+"speed": 10.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ppr3w"]
+radius = 31.4286
+height = 108.571
+
+[node name="Samurai" type="CharacterBody2D" groups=["Player"]]
+position = Vector2(221, 178)
+scale = Vector2(0.6, 0.6)
+script = ExtResource("1_8elah")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.81899e-12, -5.96046e-08)
+scale = Vector2(2.49, 2.455)
+sprite_frames = SubResource("SpriteFrames_ucanh")
+animation = &"attacking"
+autoplay = "idle"
+frame = 5
+frame_progress = 1.0
+
+[node name="WeaponCollision" type="Area2D" parent="AnimatedSprite2D"]
+
+[node name="RightWeaponColl" type="CollisionPolygon2D" parent="AnimatedSprite2D/WeaponCollision"]
+polygon = PackedVector2Array(32.5301, 24.2363, 91.1647, 25.4583, 89.5583, -21.3849, 81.9277, -31.5682, 69.0763, -39.3075, 51.4056, -45.0102, 36.9478, -48.6762, 16.8675, -50.7128, -4.41767, -49.0835, -15.6627, -46.2322, -17.6707, -36.4562, -7.63052, -27.9022, 0.803215, -27.0876, 16.0643, -29.9389, 28.1124, -27.0876, 30.1205, -18.9409, 33.3333, -14.8676, 34.5382, -5.09164)
+one_way_collision_margin = 0.0
+
+[node name="LeftWeaponColl" type="CollisionPolygon2D" parent="AnimatedSprite2D/WeaponCollision"]
+rotation = 3.14159
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(32.5301, 24.2363, 91.1647, 25.4583, 89.5583, -21.3849, 81.9277, -31.5682, 69.0763, -39.3075, 51.4056, -45.0102, 36.9478, -48.6762, 16.8675, -50.7128, -4.41767, -49.0835, -15.6627, -46.2322, -17.6707, -36.4562, -7.63052, -27.9022, 0.803215, -27.0876, 16.0643, -29.9389, 28.1124, -27.0876, 30.1205, -18.9409, 33.3333, -14.8676, 34.5382, -5.09164)
+one_way_collision_margin = 0.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -200)
+zoom = Vector2(1.5, 1.5)
+position_smoothing_speed = 7.0
+
+[node name="hit_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("42_lbphu")
+volume_db = -20.612
+
+[node name="miss_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("43_t1678")
+volume_db = -10.306
+
+[node name="jump_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_u0ule")
+volume_db = 14.054
+
+[node name="run_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("44_8xp4r")
+pitch_scale = 0.65
+
+[node name="damage_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("45_jc87d")
+volume_db = -6.559
+
+[node name="death_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("46_npq8f")
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ppr3w")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="frame_changed" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_frame_changed"]
+[connection signal="body_entered" from="AnimatedSprite2D/WeaponCollision" to="." method="_on_weapon_collision_body_entered"]
+[connection signal="body_exited" from="AnimatedSprite2D/WeaponCollision" to="." method="_on_weapon_collision_body_exited"]
+[connection signal="finished" from="run_sound" to="." method="_on_run_sound_finished"]
